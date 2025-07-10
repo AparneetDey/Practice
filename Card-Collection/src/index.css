@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  body {
+    min-height: 100dvh;
+    background: #e4e7ff;
+    font-family: var(--font-mono);
+    overflow-x: hidden
+  }
+
+  main {
+    @apply min-w-screen min-h-screen flex justify-center items-center px-3 py-8;
+  }
+
+  h1 {
+    @apply text-xl sm:text-2xl font-bold text-[#0e0e46] tracking-tight ;
+  }
+
+  h2 {
+    @apply text-[16px] sm:text-[18px] font-[600]
+  }
+}
+
+@layer components {
+  .card-collection {
+    @apply bg-[#dadada] w-full h-max grid grid-cols-1 gap-8 px-10 py-8 rounded-2xl shadow-2xl/35;
+  }
+}
